@@ -1,6 +1,6 @@
 # springCourse
 
-**Spring mvcHibernateAop*** - simple spring mvc project for making crud operations over entity employee, with aop for logging
+** *Spring mvcHibernateAop* ** - simple spring mvc project for making crud operations over entity employee, with aop for logging
 
 **springSecurity*** - simple project with security authentication and authorization to secure rest endpoints, which can make change to db
 
