@@ -1,0 +1,9 @@
+# springCourse
+
+Spring mvcHibernateAop - simple spring mvc project for making crud operations over entity employee, with aop for logging
+
+spring security - simple project with security authentication and authorization to secure rest endpoints, which can make change to db
+
+spring rest - rest controller for making crud operations (server side)
+
+spring restClient - to communicate with server (client side, 1st server side should be deployed!)
