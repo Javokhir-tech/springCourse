@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class MyConfig {
 
     @Bean
-    public RestTemplate restTemplate() {
+    public RestTemplate restTemplate() {    // used to convert HTTP response to java objects
         return new RestTemplate();
     }
 }
