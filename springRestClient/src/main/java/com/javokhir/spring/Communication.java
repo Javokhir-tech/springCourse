@@ -17,10 +17,10 @@ public class Communication {
 
     @Autowired
     private RestTemplate restTemplate;
+    
+    private final String URL = "http://localhost:8080/springRest/api/employees";    // url of server
 
-    private final String URL = "http://localhost:8080/springRest/api/employees";
-
-    public List<Employee> getAllEmployees() {
+    public List<Employee> getAllEmployees() {   // get all employees from server, exchange method to get
         ResponseEntity<List<Employee>> responseEntity =
                 restTemplate.exchange(URL, HttpMethod.GET, null
                         , new ParameterizedTypeReference<List<Employee>>() {});
@@ -28,7 +28,7 @@ public class Communication {
         return allEmployees;
     }
 
-    public Employee getEmployee(int id) {
+    public Employee getEmployee(int id) {   // get one, else throw exception
         Employee employee = null;
         try {
             employee = restTemplate.getForObject(URL + "/" + id,
@@ -40,7 +40,7 @@ public class Communication {
         return employee;
     }
 
-    public void saveEmployee(Employee employee) {
+    public void saveEmployee(Employee employee) {   // save or update into db of the server
         int id = employee.getId();
         if (id == 0) {
             ResponseEntity<String> responseEntity =
@@ -54,7 +54,7 @@ public class Communication {
         }
     }
 
-    public void deleteEmployee(int id) {
+    public void deleteEmployee(int id) {    // delete from db
         restTemplate.delete(URL + "/" + id);
         System.out.println("Employee with id " + id + " was deleted from db");
     }
