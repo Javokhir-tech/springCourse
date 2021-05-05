@@ -24,7 +24,7 @@ public class MyController {
     @GetMapping("/employees/{id}")
     public Employee getEmployee(@PathVariable int id) {
         Employee employee = employeeService.getEmployee(id);
-        if (employee.equals(null))
+        if (employee == null)
             throw new NoSuchEmployeeException("There is no Employee with such id " + id);
         return employee;
     }
@@ -44,7 +44,7 @@ public class MyController {
     @DeleteMapping("/employees/{id}")
     public String deleteEmployee(@PathVariable int id) {
         Employee employee = employeeService.getEmployee(id);
-        if (employee.equals(null))
+        if (employee == null)
             throw new NoSuchEmployeeException("There is no Employee with such id " + id);
         employeeService.deleteEmployee(id);
         return "Employee with id " + id + " was deleted succesfully";
