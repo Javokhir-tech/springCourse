@@ -6,4 +6,4 @@ springSecurity - simple project with security authentication and authorization t
 
 springRest - rest controller for making crud operations (server side)
 
-spring restClient - to communicate with server (client side, 1st server side should be deployed!)
+springRestClient - to communicate with server (client side, 1st server side should be deployed!)
